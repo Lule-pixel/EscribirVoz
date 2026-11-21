@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EscribirVoz.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a submarine number ten" />
+            <Label 
+                x:Name="StatusLabel"
+                Text="Listo para grabar"
+                SemanticProperties.Description="Estado de la grabación" />
+            <Editor
+                x:Name="TextEditor"
+                AutoSize="TextChanges"
+                Keyboard="Chat" />
+
+            <Button
+                x:Name="Grabar"
+                Text="Grabar"
+                Clicked="grabando"
+                HorizontalOptions="Fill" />
+            <Button
+                x:Name="Detener"
+                Text="Detener"
+                Clicked="detener"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
